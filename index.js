@@ -31,8 +31,8 @@ module.exports = {
       src = args[1];
       dest = args[2];
     } else if (args.length === 2) {
-      src = args[1];
-      dest = args[2];
+      src = args[0];
+      dest = args[1];
     } else {
       throw new Error("Please specify a source and destination");
     }
