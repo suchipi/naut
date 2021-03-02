@@ -55,7 +55,9 @@ module.exports = {
     fs.closeSync(fd);
   },
   cat(somePath) {
-    process.stdout.write(fs.readFileSync(somePath, "utf-8"));
+    const content = fs.readFileSync(somePath, "utf-8");
+    process.stdout.write(content);
+    return content;
   },
   exec(cmd) {
     child_process.execSync(cmd, {
